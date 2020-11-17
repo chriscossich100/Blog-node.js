@@ -96,7 +96,14 @@ app.use((req, res, next) =>{
             console.log(err);
         });
 
-    
+    // User.findById('5fadcbbbea0c5dc59f11b589')
+    //     .then(user =>{
+    //         req.user = new User(user.firstName, user.lastName, user.email, user.password, user.comment, user._id);
+    //         next();
+    //     })
+    //     .catch(err => {
+    //         console.log(err);
+    //     })
 
 });
 
@@ -109,6 +116,7 @@ app.use((req, res, next) =>{
 });
 
 
+//Page Middleware
 app.use(blogRoute);
 app.use(authRoute);
 app.use(profileRoute);

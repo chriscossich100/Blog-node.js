@@ -1,17 +1,23 @@
 
 
+//WERE CREATING A CLASS BECASUE WE WANT TO CREATE OUR OWN MODEL. 
+
+// const mongoConnect = require('../util/database'); //we are importing the function where we do pass a callback where we do connect to mongodb.
+
+
 
 const mongodb = require('mongodb');
 const getDb = require('../util/database').getDb; // now, we can call this function to get access to the database, instead of connecting to the connection of the database.
 
 class Posts{
-    constructor(title, image, overview, content, date, realDate){ //in this constructor, we want to store the post information: 
+    constructor(title, image, overview, content, date, realDate, postCreator){ //in this constructor, we want to store the post information: 
         this.title = title,
         this.image = image,
         this.overview = overview,
         this.content = content,
         this.date = date,
-        this.realDate = realDate
+        this.realDate = realDate,
+        this.postCreator = postCreator
     }
     //in other words we are creating a new Post in javascript
 

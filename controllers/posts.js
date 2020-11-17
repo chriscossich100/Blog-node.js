@@ -26,7 +26,7 @@ exports.createPost = (req, res, next) =>{
 
     res.render('posting/createPost', {
         title: 'Create Post',
-        path: '',
+        path: '/createPost',
         user: req.user
     });
 };
@@ -38,18 +38,21 @@ exports.postCreatePost = (req, res, next) =>{
     const content = req.body.content;
     const overview = req.body.overview;
     const image = req.body.image;
+    const creatorOfPost = req.body.userName;
     const date = new Date();
 
     const d = date.toString();
 
+    console.log('the creator of the post is: ' + creatorOfPost);
+
     const dater = d.split(" ")[0] + " " + d.split(" ")[1] + " " + d.split(" ")[2] + " " + d.split(" ")[3] + " " + d.split(" ")[4];
  
-    
-    const posts = new Posts(title, image, overview, content, dater, date);
+    console.log('the date in string is: ' + date);
+    const posts = new Posts(title, image, overview, content, dater, date, creatorOfPost);
     
     posts.save() //SINCE WE ARE RETURNING THE COLLECTION IN THE POST MODULE,  WE CANT TREAT THIS AS A CHAIN PROMISE AND USE THE .then.
         .then(result =>{
-            
+            console.log('Created Post');
             res.redirect('/posts');
         })
         .catch(err =>{
@@ -82,11 +85,15 @@ exports.getPost = (req, res, next) =>{
     Posts.findById(postId)
         .then(post =>{
             postInfo = post;
-            
+            // res.render('posting/post', {
+            //     post: post,
+            //     title: post.title,
+            //     path: '/blog'
+            // });
             return Comment.findById(postId);
         })
         .then(comments =>{
-            
+            // console.log('the comment retrieved is: ' + comments[0].comment);
             console.log('the length of the post is: ' + postInfo.title);
             console.log('the length of the comments array is: ' + comments.length);
             console.log('the post info is: ' + postInfo) 

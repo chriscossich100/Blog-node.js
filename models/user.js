@@ -1,4 +1,19 @@
+// const mongoose = require('mongoose');
 
+// const Schema = mongoose.Schema;
+
+// const UserSchema = new Schema({
+//     email:{
+//         type: String,
+//         required: true
+//     },
+//     password: {
+//         type: String,
+//         required: true
+//     },
+//     resetToken: String,
+//     resetTokenExpiration: Date
+// });
 
 const mongodb = require('mongodb');
 const getDb = require('../util/database').getDb; // now, we can call this function to get access to the database, instead of connecting to the connection of the database.
@@ -16,8 +31,16 @@ const ObjectId = mongodb.ObjectId;
 
      static addToCommentsList(postInfo, userInfo){
 
+        // if(this.comment == null){
+        //     console.log('legendary status');
 
-        
+        //     const updatedCommentList = {post: [{postId: new ObjectId(postInfo._id), quantity: 1}]};
+
+        //     const db = getDb();
+        //     return db.collection('users').updateOne({_id: new ObjectId(this._id)}, {$set: {comment: updatedCommentList}})
+        // }
+
+        console.log('are we even getting to this point?' + userInfo.firstName);
 
             const commentExist = userInfo.comment.post.findIndex(cp =>{
                 return cp.postId.toString() === postInfo._id.toString();
@@ -38,7 +61,7 @@ const ObjectId = mongodb.ObjectId;
                 post: updatedCommentList
             }
     
-            
+            console.log('the the the the the the ' + commentExist);
     
             // const updatedCommentList = {post: [{postId: new ObjectId(postInfo._id), quantity: 1}]};
     
@@ -124,3 +147,37 @@ const ObjectId = mongodb.ObjectId;
  };
 
  module.exports = User;
+
+
+
+
+
+
+
+// const getDb = require('../util/database').getDb;
+// const mongoDb = require('mongodb');
+
+// const ObjectId = mongoDb.ObjectID;
+
+// class User{
+//     constructor(firstName, lastName, email, password){
+//         this.firstName = firstName,
+//         this.lastName = lastName,
+//         this.email = email,
+//         this.password = password
+//     }
+
+//     save(){
+//         const db = getDb();
+//         return db.collection('users').insertOne(this) //we are inserting one new element. were using this since we are trying to get the javascript objects which are the first names, last names, etc/
+//     }
+
+//     static findById(userID){
+//         const db = getDb();
+//         return db.collection('users').find({_id: new ObjectId(userId)}).next();
+//     }
+// }
+
+
+// // module.exports = mongoose.model('user', UserSchema);
+// module.exports = User;

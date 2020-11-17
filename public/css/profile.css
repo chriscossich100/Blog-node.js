@@ -31,7 +31,6 @@
 .overlayBoxSuccess{
     margin-top: -45px;
     background-color: rgba(252, 252, 252, 0.767);
-    padding: 20px;
     
 }
 
@@ -42,7 +41,6 @@
 
 .overlayBoxSuccess .options p{
     text-align: center;
-    cursor: pointer;
     
 }
 

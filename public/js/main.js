@@ -66,3 +66,17 @@ $(function(){
 
 });
 
+
+
+// const toggleMenu = document.querySelector('.side-menu-toggle');
+// const backgroundDrop = document.querySelector('.backgroundDrop');
+
+// function menuHandler(){
+
+//     console.log('do we get here');
+//     backgroundDrop.style.display = 'block';
+
+// }
+
+
+// toggleMenu.addEventListener('click', menuHandler);

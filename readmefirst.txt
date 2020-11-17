@@ -9,3 +9,6 @@ going into the command terminal or the integrated terminal found in your ide, an
 2). For sercurity reasons, the username, password, and database name have been changed when calling access to MongoDb. Simply
 replace your username, password, database name, and cluster in the MongoClient.connect string found in the database.js file inside the 
 util folder.
+
+	**IF YOU DONT KNOW HOW TO DO THIS, I HAVE INCLUDED A SCREENSHOT TUTORIAL THAT WILL EXPLAIN HOW TO CONNECT YOUR MONGODB DATABASE TO
+	THE APPLICATION**

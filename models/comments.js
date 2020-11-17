@@ -33,7 +33,7 @@ class Comments{
         const db = getDb();
         return db.collection('comments').find({postId: commentId}).sort({realDate: -1}).toArray()
             .then(comments =>{
-                
+                console.log(comments);
                 return comments;
             })
             .catch(err =>{

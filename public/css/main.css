@@ -362,6 +362,7 @@ body{
     letter-spacing: 3px;
     line-height: 1.43;
     font-stretch: normal;
+    text-align: center;
     
 }
 
@@ -472,11 +473,73 @@ footer{
 
 /*CREATE POST CSS*/
 .createPostContent{
+
     background-color: white;
     margin-top: 4.51rem;
+    /* height: 350px; */
 }
 
 
+.createPostContent h1{
+    padding: 40px 21px;
+    font-size: 28px;
+    background-color: 
+    #e9e8e4;
+    border-bottom: 1px solid #000;
+    display: block;
+    font-family: 'FaktPro', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    font-weight: 100;
+    line-height: 1.38;
+    letter-spacing: 2px;
+    margin: 0px;
+}
+
+.signInParagraph{
+    padding: 40px 21px;
+    font-size: 15px;
+    
+    /* border-bottom: 1px solid #000; */
+    display: block;
+    font-family: 'FaktPro', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    font-weight: 100;
+    line-height: 1.38;
+    letter-spacing: 2px;
+    margin: 0px;
+}
+
+.post-form{
+    display: flex;
+    flex-flow: column;
+    padding: 25px;
+    font-family: 'FaktPro', sans-serif;
+}
+
+.post-form input{
+    padding: 5px;
+    margin-bottom: 15px;;
+}
+
+.post-form textarea{
+    margin-bottom: 15px;
+}
+
+.bigBlackButton{
+    height: 50px;
+    width: 100%;
+    padding: 3px 10px 0 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
 
 /* ABOUT US CSS */
 
@@ -685,6 +748,11 @@ footer{
     .contactContent{
         padding: 60px 25%;
         font-size: 15px;
+    }
+
+
+    .post-form{
+        padding: 25px 30%;
     }
 
 }

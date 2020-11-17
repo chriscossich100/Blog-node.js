@@ -95,6 +95,24 @@ exports.postSignup = (req, res, next) =>{
             console.log(err);
         });
 
+        // const post = {
+        //     post: []
+        // };
+
+        // bcrypt.hash(password, 12)
+        //     .then(newPassword =>{
+        //         const user = new User(firstName, lastName, email, newPassword, post);
+
+        //         return user.save();
+        //     })
+        //     .then(result =>{
+        //         res.redirect('/login');
+        //         //....email code.
+        //     })
+        //     .catch(err=>{
+        //         //error code.
+        //         console.log(err);
+        //     });
        
     
 };
@@ -141,7 +159,7 @@ exports.postLogin = (req, res, next) =>{
     User.findOne(email)
         .then(user =>{
             if(!user){
-                console.log('couldn\'t find the user by email.');
+                console.log('coudlnt find the user by email.');
                 return res.render('auth/login', {
                     path: '/login',
                     title: 'Login',

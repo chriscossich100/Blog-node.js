@@ -7,27 +7,34 @@
 
     <%- include('../includes/navigation.ejs') %>
 
-    <main>
+    
 
         <div class = "createPostContent">
-            <form class = "product-form" action = "/createPost" method = "POST">
-                <label>Title</label>
-                <input type = "text" id = "postTitle" name = "title" placeholder="enter title here">
-                <label>Image</label>
-                <input type = "text" id = "image" name = "image" placeholder="Place image here">
-                
-                <label>Overview</label>
-                <textarea id = "content" rows = "10" cols = "100" name = "overview" placeholder="overview"></textarea>
-                <label>Content</label> 
-                <textarea id = "content" rows = "10" cols = "100" name = "content" placeholder="enter content here"></textarea>
-                <button type = "submit">Submit Post</button>
-            </form>
+
+            <h1>Create A Post here!</h1>
+
+            <% if (!user){ %>
+                <p class = "signInParagraph">Please sign in to create a post.</p>
+            <% } 
+            
+            else { %>
+
+                <form class = "post-form" action = "/createPost" method = "POST">
+                    <label>Title</label>
+                    <input type = "text" id = "postTitle" name = "title" placeholder="enter title here">
+                    <label>Image</label>
+                    <input type = "text" id = "image" name = "image" placeholder="Place image link here">
+                    <!-- <label>Image</label>
+                    <input type = "file" name = "image" id="iamge"> -->
+                    <label>Overview</label>
+                    <textarea id = "content" rows = "10" cols = "100" name = "overview" placeholder="overview"></textarea>
+                    <label>Content</label> 
+                    <textarea id = "content" rows = "10" cols = "100" name = "content" placeholder="enter content here"></textarea>
+                    <input type = "hidden" id = "userId" name = "userName" value = "<%= user.firstName %> <%= user.lastName %>">
+                    <button class = "bigBlackButton" type = "submit">Submit Post</button>
+                </form>
+            <% } %>
+            
         </div>
 
-    </main>
-
-
-
-
-</body>
-</html>
+    <%- include('../includes/end.ejs') %>

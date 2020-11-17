@@ -7,10 +7,11 @@ let db;
 
 const mongoConnect = (callback) =>{
     MongoClient.connect(
-        'mongodb+srv://yournamehere:yourpasswordhere@yourclusternamehere.irdq5.mongodb.net/yourdatabasenamehere?retryWrites=true&w=majority' //mongodb will create the database if its not yet been created. we dont 
+        'mongodb+srv://yourusername:yourpassword@cluster0.nkb3n.mongodb.net/yourdbname?retryWrites=true&w=majority'
+       
+        
+        //mongodb will create the database if its not yet been created. we dont 
         //have to do it manually.
-
-        //****** FOR SECURITY REASONS, I HAVE CHANGED THE PASSWORD AND USERNAME WHICH GETS ACCESS TO THE blogposts DATABASE ****************
     )
     .then(client =>{ //this is a client object that gives us access to the database.
         console.log('connected!');
