@@ -1,0 +1,41 @@
+
+
+<div class = "backgroundDrop"></div>
+<header class = "main-header" id = "headerNav">
+    <div class = "side-menu-toggle-div"><button class = "side-menu-toggle">Menu</button></div>
+    <div class = "header-left"><a href = "/posts">Blog</a><a href = "/gallery">Gallery</a></div>
+    <a class = "logo" href = "/">The Cossich</a>
+    <div class = "header-right">
+        <% if(isAuthenticated) { %>
+            <a class = "onlyFirst" href = "/profile/<%= user.firstName %>"> <%= user.firstName %></a>
+            <a class = "firstandLast" href = "/profile/<%= user.firstName %>"> Welcome <%= user.firstName %> <%= user.lastName %></a>
+        <% }
+        else { %>
+            <a href = "/login">Account</a>
+        <% } %>
+        
+        
+    </div>
+</header>
+
+
+
+<nav class = "sideMenu">
+    <div class = "sideMenuContent">
+        <p id = "cancelOut">X</p>
+    </div>
+    <div class = "sideMenuContent2">
+        
+            <a class = "<%= path === '/' ? 'active' : '' %>" href = "/">Home</a>
+            <%if (isAuthenticated) { %>
+                <a class = "<%= path === '/profile/:userFirstName' ? 'active' : '' %>" href = "/profile/<%= user.firstName %>">Profile</a>
+            <% }
+            else{ %>
+                <a class = "<%= path === '/signup' || path === '/login' ? 'active' : '' %>" href = "/login">Account</a>
+            <% } %>
+            <a class = "<%= path === '/blog' ? 'active' : '' %>" href = "/posts">Blog</a>
+            <a class = "<%= path === '/gallery' ? 'active' : '' %>" href = "/gallery">Gallery</a>
+            <a href = "https://github.com/chriscossich100?tab=repositories">Git</a>
+            <a class = "<%= path === '/contact' ? 'active' : '' %>" href = "/contact">Contact</a>
+    </div>
+</nav>

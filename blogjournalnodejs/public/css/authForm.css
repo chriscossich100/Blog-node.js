@@ -1,0 +1,122 @@
+.formContent{
+    /* background-color: yellow; */
+    margin-top: 4.51rem;
+    padding: 45px 20px 45px 20px; 
+    background-color: #e9e8e4;
+}
+
+main{
+    background-color: #e9e8e4;
+}
+
+.formHeader{
+    display: flex;
+    /* background-color: brown; */
+    justify-content: space-between;
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+
+}
+
+.formHeader h1{
+    margin: 0;
+    font-size: 24px;
+}
+
+
+.formHeader a{
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: .9x;
+    line-height: 1.7;
+    color: black;
+}
+
+
+.signUpForm{
+    margin-top: 20px;
+    background-color: #f7f6f4;
+    
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+    border: 1px solid black;
+    border-bottom: 0;
+}
+
+.formLabel{
+    display: none;
+}
+
+.formInfo{
+    width: 100%;
+    padding: 0 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.formInfo input{
+    width: 100%;
+    border: none;
+    background-color: #f7f6f4;
+}
+
+.bigButtonBlack{
+    height: 50px;
+    width: 100%;
+    padding: 3px 10px 0 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.errorMessage{
+    color: red;
+    font-size: 13px;
+    letter-spacing: .9px;
+    line-height: 1.7;
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+}
+
+
+@media (min-width: 768px){
+    .formContent{
+        width: 50%;
+        margin: 4.51rem auto 0 auto;
+    }
+
+    .formHeader h1{
+        font-size: 33px;
+    }
+
+    .formInfo{
+        height: 90px;
+    }
+}
+
+
+@media (min-width: 851px){
+    
+    .formContent{
+        width: 50%;
+        margin: 4.51rem auto 0 auto;
+    }
+
+    .formHeader h1{
+        font-size: 33px;
+    }
+
+    .formInfo{
+        height: 90px;
+    }
+
+    .formLabel{
+        display: block;
+        flex-basis: 35%;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+};

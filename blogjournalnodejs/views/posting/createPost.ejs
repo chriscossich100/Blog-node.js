@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+
+</head>
+
+
+<body>
+
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+
+        <div class = "createPostContent">
+            <form class = "product-form" action = "/createPost" method = "POST">
+                <label>Title</label>
+                <input type = "text" id = "postTitle" name = "title" placeholder="enter title here">
+                <label>Image</label>
+                <input type = "text" id = "image" name = "image" placeholder="Place image here">
+                
+                <label>Overview</label>
+                <textarea id = "content" rows = "10" cols = "100" name = "overview" placeholder="overview"></textarea>
+                <label>Content</label> 
+                <textarea id = "content" rows = "10" cols = "100" name = "content" placeholder="enter content here"></textarea>
+                <button type = "submit">Submit Post</button>
+            </form>
+        </div>
+
+    </main>
+
+
+
+
+</body>
+</html>
