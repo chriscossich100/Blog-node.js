@@ -1,0 +1,254 @@
+
+.postsList{
+    margin-top: 4.51rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e9e8e4;
+}
+
+
+.postDisplay{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    border-top: 1px solid black;
+    
+    background-color: #e9e8e4;
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+}
+
+
+.postDisplay a img{
+    border-bottom: 1px solid #000;
+    object-fit: cover;
+}
+
+
+.titleHeader{
+    padding: 20px;
+    padding-bottom: 0;
+    
+}
+
+.titleHeader h3{
+    font-size: 28px;
+    padding-top: 20px;
+    line-height: 1.43;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.titleHeader h3 a{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.overviewContent{
+    padding: 20px;
+    
+}
+
+.overviewContent span a{
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: .9px;
+    line-height: 1.7;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.dateContent{
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .9px;
+}
+
+
+.singlePost{
+    margin-top: 4.51rem;
+    background-color: #e9e8e4;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.imgDiv{
+    flex-basis: 100%;
+}
+
+
+.singlePost img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.blogInfoDiv{
+    flex-basis: 100%;
+    padding: 20px 5px;
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+    color: black;
+}
+
+.blogInfoDiv header p{
+    font-size: 11px;
+    letter-spacing: .9px;
+    line-height: 1.7;
+}
+
+.blogInfoDiv header h1{
+    font-size: 28px;
+    margin: 0;
+    padding-right: 100px;
+    padding-bottom: 25px;
+    font-weight: normal;
+    
+}
+
+.blogInfoDiv header span{
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: 15px;;
+    padding: 10px 0;
+    letter-spacing: .9px;
+    line-height: 1.7;
+}
+
+.blogInfoDiv p{
+    font-size: 14px;
+    letter-spacing: .9px;
+    line-height: 1.7;
+}
+
+
+.commentsSection{
+    flex-basis: 100%;
+    /* padding: 10px 25px; */
+}
+
+.commentDiv{
+    border: 1px solid lightgray;
+    padding: 15px;
+    /* background-color: #f0eee9; */
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+}
+
+.commentDiv h2{
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: normal;
+    letter-spacing: .9px;;
+}
+
+.commentsSection textarea{
+    width: 100%;
+}
+
+.commentsSection .signInInput{
+    padding: 3px 10px 0 10px;
+    /* background-color: black; */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.commentsSection .postComment{
+    padding: 3px 10px 0 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+
+.commentHolder{
+    margin-top: 25px;
+}
+
+.comments{
+    border-top: 1px solid lightgray
+}
+
+.comments span{
+    display: inline-block;
+    opacity: 0.7;
+    margin-left: 4px;
+    line-height: 1.4;
+    font-size: 13px;
+    letter-spacing: .9px;
+    
+}
+
+.comments .user{
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: .9px;
+    display: inline-block;
+    
+}
+
+.comments .actualComment{
+    line-height: 1.4;
+    font-size: 13px;
+    letter-spacing: .9px;
+    
+}
+
+@media (min-width: 768px){
+
+    .postDisplay{
+        flex-basis: 33.3333%;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .postDisplay a img{
+        object-fit: cover;
+    }
+
+    .singlePost img{
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .imgDiv{
+        flex-basis: 50%;
+    }
+
+    .blogInfoDiv{
+        flex-basis: 50%;
+        padding: 0 50px;
+        /*padding-top: 20px;
+        padding-bottom: 10px; */
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .blogInfoDiv p{
+        margin-bottom: 50px;;
+
+    }
+
+    .commentsSection{
+        flex-basis: 100%;
+        padding: 20px 25px 0 25px;;
+    }
+    
+}
+
+@media (min-width: 1500px){
+    .blogInfoDiv{
+        padding: 0 100px;
+    }
+}

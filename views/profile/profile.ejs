@@ -1,0 +1,88 @@
+<%- include('../includes/head.ejs') %>
+<link rel = "stylesheet" href = "/css/profile.css" />
+</head>
+
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    
+
+    <main>
+        
+        <% if(passwordClass == 'show'){ %>
+            <div class = 'overlay'>
+                <div class = "overlayBox">
+                    <h3><%= errorMessage %></h3>
+                    <div class = "options">
+                        <p id = "tryAgainButton">Try again</p>
+                        <p id = "cancelButton">Cancel</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        <% } %>
+
+        <% if(passwordClass == 'success'){ %>
+            <div class = 'overlay'>
+                <div class = "overlayBoxSuccess">
+                    <h3><%= errorMessage %></h3>
+                    <div class = "options">
+                        <p id = "cancelButton">Continue</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        <% } %>
+        
+
+
+        <div class = "mainProfileSection">
+            <div class = "rightSideProfile">
+                <div class = "textHeader">
+                    <p>Hi Chris</p>
+                    <div class = "otherChoices">
+                        <a id = "showPostedComments">Posts You Commented In</a>
+                        <a id = "changePassword">Change Password</a>
+                        <a href = "/">Home</a>
+                        <a href = "/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class = "leftSideProfile"> <!---->
+                <div id = "commentsPosted">
+                    <h2>Posts You Commented In</h2>
+                
+                    <% if(posts.length > 0){ %>
+                        
+                        <% for(let post of posts){ %>
+                            <div class = "postsCommented"><a href = "/posts/<%= post._id %>"><%= post.title %></a> </div>
+                        <% } %>
+                    <% } 
+                    
+                    else { %>
+                        <h3>It Looks Like You Havent Posted Any Comments Yet. Show Some Love!</h3>
+                    <% } %>    
+                </div>
+                
+                <div class = "changedPassword">
+                    <h4>Change Your Password</h4>
+                    <form class = "changePasswordForm" action = "/profile/<%=user.firstName %>" method = "POST">
+                        
+                        <input type = "password" placeholder="Old Password" name="oldPassword">
+                        <input type = "password" placeholder="New Password" name="newPassword">
+                        <input type = "password" placeholder="Confirm Password" name="confirmPassword">
+                        <button type = "submit">Change Password</button>
+                    </form>
+                    
+                </div>
+                
+            </div> <!---->
+            
+        </div>
+    </main>
+
+    <%- include('../includes/end.ejs') %>

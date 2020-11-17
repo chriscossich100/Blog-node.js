@@ -1,0 +1,41 @@
+<%- include('../includes/head.ejs') %>
+<link rel = "stylesheet" href = "/css/posts.css">
+</head>
+
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    
+    <main>
+        <% if(posts.length > 0) { %>
+            <div class = "postsList">
+                <% for (let post of posts) { %>
+                <div class = "postDisplay">
+                    <a href = "/posts/<%= post._id %>"><img src = "<%= post.image %>" width="100%" height = "250px"></a>
+                    
+                    <div class = "titleHeader">
+                       <h3><a href = "/posts/<%= post._id %>"><%= post.title %></h3></a>
+                    </div>
+                    
+                    <div class = "overviewContent">
+                        <span><a href = "/posts/<%= post._id %>"><%= post.overview %></a></span>
+                    </div>
+
+                    <div class = "dateContent">
+                        <span><%= post.date %></span>
+                    </div>
+                    
+                    
+                </div>
+                <% } %>
+            </div>
+
+        <% } else { %>
+            <div class = "postsList">
+                <span><a href = "#">No Posts have been created just yet.</a></span>
+            </div>
+        <% } %>    
+    </main>
+    
+
+    <%- include('../includes/end.ejs') %>
