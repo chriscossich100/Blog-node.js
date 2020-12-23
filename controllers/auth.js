@@ -94,26 +94,6 @@ exports.postSignup = (req, res, next) =>{
         .catch(err =>{
             console.log(err);
         });
-
-        // const post = {
-        //     post: []
-        // };
-
-        // bcrypt.hash(password, 12)
-        //     .then(newPassword =>{
-        //         const user = new User(firstName, lastName, email, newPassword, post);
-
-        //         return user.save();
-        //     })
-        //     .then(result =>{
-        //         res.redirect('/login');
-        //         //....email code.
-        //     })
-        //     .catch(err=>{
-        //         //error code.
-        //         console.log(err);
-        //     });
-       
     
 };
 

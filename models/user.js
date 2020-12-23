@@ -1,19 +1,3 @@
-// const mongoose = require('mongoose');
-
-// const Schema = mongoose.Schema;
-
-// const UserSchema = new Schema({
-//     email:{
-//         type: String,
-//         required: true
-//     },
-//     password: {
-//         type: String,
-//         required: true
-//     },
-//     resetToken: String,
-//     resetTokenExpiration: Date
-// });
 
 const mongodb = require('mongodb');
 const getDb = require('../util/database').getDb; // now, we can call this function to get access to the database, instead of connecting to the connection of the database.
@@ -30,17 +14,6 @@ const ObjectId = mongodb.ObjectId;
      }
 
      static addToCommentsList(postInfo, userInfo){
-
-        // if(this.comment == null){
-        //     console.log('legendary status');
-
-        //     const updatedCommentList = {post: [{postId: new ObjectId(postInfo._id), quantity: 1}]};
-
-        //     const db = getDb();
-        //     return db.collection('users').updateOne({_id: new ObjectId(this._id)}, {$set: {comment: updatedCommentList}})
-        // }
-
-        console.log('are we even getting to this point?' + userInfo.firstName);
 
             const commentExist = userInfo.comment.post.findIndex(cp =>{
                 return cp.postId.toString() === postInfo._id.toString();
@@ -60,11 +33,7 @@ const ObjectId = mongodb.ObjectId;
             const updatedComment = {
                 post: updatedCommentList
             }
-    
-            console.log('the the the the the the ' + commentExist);
-    
-            // const updatedCommentList = {post: [{postId: new ObjectId(postInfo._id), quantity: 1}]};
-    
+        
             const db = getDb();
              return db.collection('users').updateOne({_id: new ObjectId(userInfo._id)}, {$set: {comment: updatedComment}});
     
@@ -130,8 +99,7 @@ const ObjectId = mongodb.ObjectId;
         const postId = userInfo.comment.post.map(i =>{
             return i.postId;
         });
-        console.log('the post ids in which the user commented in our: ' + postId);
-
+        
         return db.collection('posts')
             .find({_id: {$in: postId}})
             .toArray()

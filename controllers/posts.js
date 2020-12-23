@@ -46,9 +46,7 @@ exports.postCreatePost = (req, res, next) =>{
     console.log('the creator of the post is: ' + creatorOfPost);
 
     const dater = d.split(" ")[0] + " " + d.split(" ")[1] + " " + d.split(" ")[2] + " " + d.split(" ")[3] + " " + d.split(" ")[4];
- 
-    console.log('the date in string is: ' + date);
-    const posts = new Posts(title, image, overview, content, dater, date, creatorOfPost);
+     const posts = new Posts(title, image, overview, content, dater, date, creatorOfPost);
     
     posts.save() //SINCE WE ARE RETURNING THE COLLECTION IN THE POST MODULE,  WE CANT TREAT THIS AS A CHAIN PROMISE AND USE THE .then.
         .then(result =>{
@@ -85,18 +83,10 @@ exports.getPost = (req, res, next) =>{
     Posts.findById(postId)
         .then(post =>{
             postInfo = post;
-            // res.render('posting/post', {
-            //     post: post,
-            //     title: post.title,
-            //     path: '/blog'
-            // });
+            
             return Comment.findById(postId);
         })
-        .then(comments =>{
-            // console.log('the comment retrieved is: ' + comments[0].comment);
-            console.log('the length of the post is: ' + postInfo.title);
-            console.log('the length of the comments array is: ' + comments.length);
-            console.log('the post info is: ' + postInfo) 
+        .then(comments =>{            
             res.render('posting/post', {
                 post: postInfo,
                 title: postInfo.title,
@@ -114,14 +104,12 @@ exports.getPost = (req, res, next) =>{
 exports.postComments = (req, res, next) =>{
 
     const postId = req.params.postId;
-    console.log('the request user in the post comments section is ' + req.user.firstName);
     const date = new Date();
     const stringDate = date.toString();
     const finalDate = stringDate.split(' ')[1] + '/' + stringDate.split(' ')[2] + '/' + stringDate.split(' ')[3];
 
     Posts.findById(postId)
         .then(posts =>{
-            console.log('the post info after posting the comment is: ' + posts);
             return Users.addToCommentsList(posts, req.user)
         })
         .then(result =>{
