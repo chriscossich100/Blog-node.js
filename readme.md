@@ -4,7 +4,7 @@ Welcome to my Blog. This simple Blog was created as a way to to demenstrate my s
 that contains basic and important features, such as creating and logging in users, and adding comments. Though there are many ways this Blog could've been created, I decided to create it using
 Node.js. I chose to develop the blog using Node.js as this gave me the chance to learn more on how to program with 3rd party packages and a bit of back end. Which brings me to the back end of the project. In this Blog, I used NoSql (mongoDb) to create users, add comments, add posts ,etc. 
 
-**Please understand that im not an expert in node.js, so if there is anything I dont explain correctly, refer to the Node.js Documentation.**
+**Please refer to the Node.js documentation for any futher questions**
 
 
 

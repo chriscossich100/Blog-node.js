@@ -7,7 +7,7 @@ let db;
 
 const mongoConnect = (callback) =>{
     MongoClient.connect(
-        'mongodb+srv://yourusername:yourpassword@cluster0.nkb3n.mongodb.net/yourdbname?retryWrites=true&w=majority'
+        'mongodb+srv://chriscossich:Gugu9000@blogcluster.irdq5.mongodb.net/blogposts?retryWrites=true&w=majority'
        
         
         //mongodb will create the database if its not yet been created. we dont 
