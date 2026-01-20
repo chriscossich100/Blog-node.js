@@ -1,0 +1,81 @@
+<%- include('../includes/head.ejs') %>
+<link rel = "stylesheet" href = "/css/profile.css" />
+<link rel = "stylesheet" href = "/css/authForm.css" />
+</head>
+
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    
+
+    <main class="userProfile">
+    
+
+
+        <div class = "mainProfileSection">
+            <div class = "rightSideProfile">
+                <div class = "textHeader">
+                    <div class = "otherChoices">
+                        <a id = "showPostedComments">Your Comments</a>
+                        <a id = "changePassword">Change Password</a>
+                        <a href = "/">Home</a>
+                        <a href = "/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class = "leftSideProfile"> <!---->
+                <div class = "commentsPosted<%= passwordClass == 'show' || passwordClass == 'success'? ' pass-no-show' : null %>">
+                    <h2>Posts You Commented In</h2>
+
+                    <% if(posts.length > 0) { %>
+                    <div class="post-commented-lists">
+                            <% for(let post of posts ) { %>
+                                <div class="post-commented-lists-post">
+                                    <img src="/images/<%= post.imageFileName %>" alt="">
+                                    <p style="padding: 15px; text-align: center;"><%= post.title %></p>
+                                    <a href="/posts/<%= post.paramTitle %>"></a>
+                                </div>
+                            
+                           <% } %>
+                    </div>
+                    <% }
+                    
+                    else { %>
+                        <h3>It Looks Like You Havent Posted Any Comments Yet. Show Some Love!</h3>
+                    <% } %>    
+                </div>
+                
+                <div class = "changedPassword <%= passwordClass == 'show' || passwordClass == 'success' ? 'pass-change-results' : null %>">
+                    <h4>Change Your Password</h4>
+                  
+                    <form class="userFillForm" action="/profile/<%=user.firstName %>#" method="POST" novalidate>
+                        <div class="input-holder">
+                            <fieldset>
+                                <label for="oldpassword" class="label-hidden">old Password</label>
+                                <input type="password" name="oldPassword" id = 'oldpassword' placeholder="Old Password">
+                            </fieldset>
+                            <fieldset>
+                                <label for="NewPassword" class="label-hidden">New Password</label>
+                                <input type="password" name="newPassword" id = 'NewPassword' placeholder="New Password" >
+                            </fieldset>
+                            <fieldset>
+                                <label for="CurrentPassword" class="label-hidden">CurrentPassword</label>
+                                <input type="password" name="confirmPassword" id = 'CurrentPassword' placeholder="Password">
+                            </fieldset>
+                        </div>
+                        <p>
+                            <input type="submit" value="Change Password" class="submitFormButton">
+                        </p>
+                    </form>
+                    <% if (passwordClass == 'show') { %> <p class = "pass-change-error"><%= errorMessage %></p> <% } %>
+                    <% if (passwordClass == "success") { %> <p class="pass-change-success"><%= errorMessage %></p> <%} %>
+                </div>
+                
+            </div> 
+            
+        </div>
+    </main>
+
+    <%- include('../includes/end.ejs') %>

@@ -1,0 +1,74 @@
+0000000000000000000000000000000000000000 b56d4169605df0a2aa4d878e7ed1c26e738f043a CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605670902 -0500	commit (initial): uploading
+b56d4169605df0a2aa4d878e7ed1c26e738f043a ae6f8331d4201ad6d40d26d601a7e65db2db2fd8 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605671127 -0500	commit: made changes
+ae6f8331d4201ad6d40d26d601a7e65db2db2fd8 9d42b3e8555148f1281cada90b91803ed1c35341 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605685498 -0500	commit: made changes
+9d42b3e8555148f1281cada90b91803ed1c35341 80ab1b5fc3cccefb29dcb34fcd91684085c84aa3 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605687287 -0500	commit: made changes
+80ab1b5fc3cccefb29dcb34fcd91684085c84aa3 f9fa483f863b356b83762a777970360d26095b1b CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605687829 -0500	commit: made changes
+f9fa483f863b356b83762a777970360d26095b1b 1dd62c6dd4580c0d9bfe43c4736e59e62cdac00b CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605688108 -0500	commit: made it even better
+1dd62c6dd4580c0d9bfe43c4736e59e62cdac00b a52e058fb7906a7686b34c243989cc0401f9973d CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605834211 -0500	commit: made it even better
+a52e058fb7906a7686b34c243989cc0401f9973d 7d2f7897cab3ebe295d2b9d384e8ab8a2969800f CHRISTOPHR COSSICH <chriscossich@gmail.com> 1605834943 -0500	commit: fixed an issue with the navigation menu
+7d2f7897cab3ebe295d2b9d384e8ab8a2969800f 275a3e403e152565f4a365e2a87c5d77bb32b63f CHRISTOPHR COSSICH <chriscossich@gmail.com> 1606029337 -0500	commit: fixed an issue with iphone image resizing
+275a3e403e152565f4a365e2a87c5d77bb32b63f 76d9daec30478496f46037507a6e7628589b39a0 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1606029415 -0500	commit: fixed an issue with iphone image resizing
+76d9daec30478496f46037507a6e7628589b39a0 404b36c7dea77856ad97069511959cb5fa8053ee CHRISTOPHR COSSICH <chriscossich@gmail.com> 1606030159 -0500	commit: fixed an issue with iphone image resizing
+404b36c7dea77856ad97069511959cb5fa8053ee 68d7efcc6e1fcc65bd07a1279b42af3cd1887313 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1606974731 -0500	commit: final fix on images
+68d7efcc6e1fcc65bd07a1279b42af3cd1887313 2cfd6fff76593b4ed812ae5ff29e40ce7ec207fa CHRISTOPHR COSSICH <chriscossich@gmail.com> 1607838642 -0500	commit: make it better
+2cfd6fff76593b4ed812ae5ff29e40ce7ec207fa 8760a389cefd16e445a6a619640bcd60db1c0a85 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1608758135 -0500	commit: make it betterpt2
+8760a389cefd16e445a6a619640bcd60db1c0a85 0c8342c5af6e61377d93ef88ff5808b182c32ad4 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1608758213 -0500	commit: make it betterpt3
+0c8342c5af6e61377d93ef88ff5808b182c32ad4 a56cb63adcfa7992e2b57b3d9fb3837438b60680 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1608758556 -0500	commit: make it betterpt4
+a56cb63adcfa7992e2b57b3d9fb3837438b60680 5d0ac7d69160565ec44cdc9ad4e0a358ddab6690 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1610223350 -0500	commit: updated cors policy to allow users to access the login page
+5d0ac7d69160565ec44cdc9ad4e0a358ddab6690 ac41e04b93c77bb1ca7ceb89b07d8ce24eddb4e4 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1610427447 -0500	commit: updated cors policy to allow users to access the profile page
+ac41e04b93c77bb1ca7ceb89b07d8ce24eddb4e4 859cdde734b51684715a46e6275c92090a9107e8 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1612248840 -0500	commit: made final changes to the cors policy on about us and contact page
+859cdde734b51684715a46e6275c92090a9107e8 23d3557be5e1e8105b8db64d9080f8414e74226c CHRISTOPHR COSSICH <chriscossich@gmail.com> 1613357245 -0500	commit: made some overall appearance changes
+23d3557be5e1e8105b8db64d9080f8414e74226c 8c3f93c266e90d9a2e81207fb9771783bc2c6fa8 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1613360363 -0500	commit: made some overall appearance changes pt2
+8c3f93c266e90d9a2e81207fb9771783bc2c6fa8 289708e2f05b83525734bf3883b95d95d7f2e742 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1613360415 -0500	commit: made some overall appearance changes pt3
+289708e2f05b83525734bf3883b95d95d7f2e742 8885940cb35302c40086740286489961c327cbd6 CHRISTOPHR COSSICH <chriscossich@gmail.com> 1614701940 -0500	commit: changed display
+8885940cb35302c40086740286489961c327cbd6 eb1a090fe2935738b4f8389e056e75a10db56aee chriscossich100 <chriscossich@gmail.com> 1620537335 -0400	commit: add something small
+eb1a090fe2935738b4f8389e056e75a10db56aee e4bf4f0542da392813123e095e4a3e5f35c919a8 chriscossich100 <chriscossich@gmail.com> 1620537513 -0400	commit: changed main picture
+e4bf4f0542da392813123e095e4a3e5f35c919a8 25c7b2f90617836ec13665cfcff999acc92bd4de chriscossich100 <chriscossich@gmail.com> 1620537637 -0400	commit: changed main picture
+25c7b2f90617836ec13665cfcff999acc92bd4de fd5e9ec5818aae14669f005630a57892e71579db chriscossich100 <chriscossich@gmail.com> 1620537795 -0400	commit: changed main picture
+fd5e9ec5818aae14669f005630a57892e71579db f8b4c7b9c1ccbdb7b172486bf31104c199c6c39d chriscossich100 <chriscossich@gmail.com> 1620537885 -0400	commit: changed main picture
+f8b4c7b9c1ccbdb7b172486bf31104c199c6c39d a0480ccd1707543e056aaa4bf06c85eed06f874e chriscossich100 <chriscossich@gmail.com> 1620537977 -0400	commit: changed main picture again
+a0480ccd1707543e056aaa4bf06c85eed06f874e 65fe8f9d1e7dbc74bb569cad90491200b8e61aaf chriscossich100 <chriscossich@gmail.com> 1620953310 -0400	commit: made a change where the user couldn't createa an account
+65fe8f9d1e7dbc74bb569cad90491200b8e61aaf af0db6ab1655a2a07d6eff347abb850241399958 chriscossich100 <chriscossich@gmail.com> 1623600681 -0400	commit: banner change
+af0db6ab1655a2a07d6eff347abb850241399958 c8740be63bef7e3d07e138a52a2e3a6cec6c4965 chriscossich100 <chriscossich@gmail.com> 1623600980 -0400	commit: banner change
+c8740be63bef7e3d07e138a52a2e3a6cec6c4965 85ae2a7377d6e2b095ce554704e721dd6f96a32e chriscossich100 <chriscossich@gmail.com> 1623604949 -0400	commit: added opacity to the banner image to make it looke better
+85ae2a7377d6e2b095ce554704e721dd6f96a32e 5652948560d288f294131671d6353ea5803b3416 chriscossich100 <chriscossich@gmail.com> 1624505001 -0400	commit: changed banner
+5652948560d288f294131671d6353ea5803b3416 23b64124fe0c9b50e64dbdb9af5e18be5f50531b chriscossich100 <chriscossich@gmail.com> 1624505181 -0400	commit: changed banner
+23b64124fe0c9b50e64dbdb9af5e18be5f50531b 6314ef06be3484eb89e510e00e99f336622ed03b chriscossich100 <chriscossich@gmail.com> 1626911395 -0400	commit: made changes to the homepage
+6314ef06be3484eb89e510e00e99f336622ed03b 9a135727a9352dda44dcdaffb8e96715365b6390 chriscossich100 <chriscossich@gmail.com> 1626927090 -0400	commit: made changes to the homepage
+9a135727a9352dda44dcdaffb8e96715365b6390 b777f3040909787edcfe83f2d4cc396391100960 chriscossich100 <chriscossich@gmail.com> 1627019666 -0400	commit: change home banner
+b777f3040909787edcfe83f2d4cc396391100960 e2617134f4f37f06bd2e933a5e5226d530e0efd7 chriscossich100 <chriscossich@gmail.com> 1628446232 -0400	commit: fixed typo in the front page
+e2617134f4f37f06bd2e933a5e5226d530e0efd7 4e06e7f9205ea031c2dccc45555366e58a657dac chriscossich100 <chriscossich@gmail.com> 1631251329 -0400	commit: made changes to banner image
+4e06e7f9205ea031c2dccc45555366e58a657dac 92fe617a8c66cbb4fd9cbecf3ce939ce499c5a08 chriscossich100 <chriscossich@gmail.com> 1635676959 -0400	commit: made overall changes to the single post page and other small css features
+92fe617a8c66cbb4fd9cbecf3ce939ce499c5a08 9a5a55886a8322a64cda4456c417b8f0975e4ceb chriscossich100 <chriscossich@gmail.com> 1635678926 -0400	commit: made changes to css in the post page
+9a5a55886a8322a64cda4456c417b8f0975e4ceb 550bb52c0130ee626b226d1bb07902c4b5fd076a chriscossich100 <chriscossich@gmail.com> 1636186728 -0400	commit: made css changes to the homepage
+550bb52c0130ee626b226d1bb07902c4b5fd076a c2cf5e00b8cc6fc21aca2e8d1a7acdaff87c5166 chriscossich100 <chriscossich@gmail.com> 1636280458 -0500	commit: made changes so that posts are now stored in a json file instead of being stored in mongodb
+c2cf5e00b8cc6fc21aca2e8d1a7acdaff87c5166 788e181cd59173ba3dedaa5cee7fb93d3e6ee921 chriscossich100 <chriscossich@gmail.com> 1636287599 -0500	commit: ADDED THE ABILITY TO COMMENT ON PAGES AND ADDED THE COMMENTS OVER TO THE JSON FILE
+788e181cd59173ba3dedaa5cee7fb93d3e6ee921 1260ce37c45ac193ca6c4c9a08c45e247ef10688 chriscossich100 <chriscossich@gmail.com> 1636287926 -0500	commit: made changes to you
+1260ce37c45ac193ca6c4c9a08c45e247ef10688 5c12d016ece93cebf249bed15311b80b811954ec chriscossich100 <chriscossich@gmail.com> 1636288220 -0500	commit: removed comments from json file
+5c12d016ece93cebf249bed15311b80b811954ec bbb9a6a72ea66d96a3b0e56e387620752214730d chriscossich100 <chriscossich@gmail.com> 1636340772 -0500	commit: fixed the mobile homepage
+bbb9a6a72ea66d96a3b0e56e387620752214730d 0715046737f4111f349b1d47985d6f3ea7102873 chriscossich100 <chriscossich@gmail.com> 1636341579 -0500	commit: made some css changes
+0715046737f4111f349b1d47985d6f3ea7102873 5123f557bfc9b4dd627455cb2c958c6383c86b69 chriscossich100 <chriscossich@gmail.com> 1636428683 -0500	commit: added a new post via the localpage
+5123f557bfc9b4dd627455cb2c958c6383c86b69 a4d0f96328cb8790dfcccdcef2d0312bb7db18e1 chriscossich100 <chriscossich@gmail.com> 1636496402 -0500	commit: updated the site to include proper pargraphs
+a4d0f96328cb8790dfcccdcef2d0312bb7db18e1 7b4419655e093e06f27445d85882474765413f8f chriscossich100 <chriscossich@gmail.com> 1636496663 -0500	commit: renamed the site to THE COSSICH
+7b4419655e093e06f27445d85882474765413f8f 9863d920cdceecb21dfe99d34438bec2ee37676c chriscossich100 <chriscossich@gmail.com> 1637364572 -0500	commit: made some overall css changes
+9863d920cdceecb21dfe99d34438bec2ee37676c 5e329e7bb3bfa7e2ac305b4ee5d107d68775d2e3 chriscossich100 <chriscossich@gmail.com> 1637367807 -0500	commit: made some small css changes and included an excerpt on the new blog section for desktop view
+5e329e7bb3bfa7e2ac305b4ee5d107d68775d2e3 5a4e5d50d81721dc48548359966d74b753aaec96 chriscossich100 <chriscossich@gmail.com> 1637399144 -0500	commit: made some css changes
+5a4e5d50d81721dc48548359966d74b753aaec96 f411ea250f5123fa91a101709825229291963d86 chriscossich100 <chriscossich@gmail.com> 1637399592 -0500	commit: made some css changes
+f411ea250f5123fa91a101709825229291963d86 d23361d2d2a7bb96d8bd961519fb954912ca4ab4 chriscossich100 <chriscossich@gmail.com> 1637452186 -0500	pull heroku master: Fast-forward
+d23361d2d2a7bb96d8bd961519fb954912ca4ab4 8c37884ab957d23c912996e788d8a469fd5972fc chriscossich100 <chriscossich@gmail.com> 1637465322 -0500	commit: made some css changes to the footer
+8c37884ab957d23c912996e788d8a469fd5972fc cae82bc0b856d0bea6bccf4a8c8574533e6a9959 chriscossich100 <chriscossich@gmail.com> 1637465684 -0500	commit: added copyright year
+cae82bc0b856d0bea6bccf4a8c8574533e6a9959 d13384c84e45264b0682947956056ad7622a50f0 chriscossich100 <chriscossich@gmail.com> 1637480597 -0500	commit: made css changes to the footer to be at the bottom dynamically
+d13384c84e45264b0682947956056ad7622a50f0 14268a9105532b0d23af471d333d42d26c69e1b8 chriscossich100 <chriscossich@gmail.com> 1638382396 -0500	commit: made some css changes to the header
+14268a9105532b0d23af471d333d42d26c69e1b8 df9bf767d1c914e1c574cb6b48faeeedeaf55b29 chriscossich100 <chriscossich@gmail.com> 1638382854 -0500	commit: made some css changes to the new on the blog section
+df9bf767d1c914e1c574cb6b48faeeedeaf55b29 e4e5a735ffe1767608b2f6163611b5916c491fa2 chriscossich100 <chriscossich@gmail.com> 1671154305 -0500	commit: quick update
+e4e5a735ffe1767608b2f6163611b5916c491fa2 84b93f78c24a826c26d1ea6660d5488163fbde18 chriscossich100 <chriscossich@gmail.com> 1671154391 -0500	commit: updated master
+84b93f78c24a826c26d1ea6660d5488163fbde18 3d750ee758ba3e9999eeb45282fb059a05a3d0d4 chriscossich100 <chriscossich@gmail.com> 1671154820 -0500	commit (merge): merged master-revamped
+3d750ee758ba3e9999eeb45282fb059a05a3d0d4 6de65ab298dc493b7df50d74e9a7c008b5f2bcf9 chriscossich100 <chriscossich@gmail.com> 1676403636 -0500	commit: updated overall look of the site
+6de65ab298dc493b7df50d74e9a7c008b5f2bcf9 d92d4f8cf1925ca39980602aa4ebdfce593490aa chriscossich100 <chriscossich@gmail.com> 1676478096 -0500	commit: updated css on the home page
+d92d4f8cf1925ca39980602aa4ebdfce593490aa 799767e72123d3f3256d934d6df16c9ebaa3df92 chriscossich100 <chriscossich@gmail.com> 1689693729 -0400	commit: updated some overall css to the website
+799767e72123d3f3256d934d6df16c9ebaa3df92 bf0574a4362e30e3bb986efdfb86bff32f8216b6 chriscossich100 <chriscossich@gmail.com> 1689694420 -0400	commit: created new post
+bf0574a4362e30e3bb986efdfb86bff32f8216b6 8a5b1de2618dfc6ea75a02eaeb23cfdad60c4cfa chriscossich100 <chriscossich@gmail.com> 1690929351 -0400	commit: updated the posts
+8a5b1de2618dfc6ea75a02eaeb23cfdad60c4cfa 04e635f91d07cbd2e57602a59977e43d4a36ae3b chriscossich100 <chriscossich@gmail.com> 1697657412 -0400	commit: updated login page to show correct text
+04e635f91d07cbd2e57602a59977e43d4a36ae3b 1226c222ea44f6b05d27655593a38d77b4e99a18 chriscossich100 <chriscossich@gmail.com> 1698125221 -0400	commit: updated css and the home page to reflect right age
+1226c222ea44f6b05d27655593a38d77b4e99a18 b7f614fdf690eb8dc21681a03952222101d51456 chriscossich100 <chriscossich@gmail.com> 1698193694 -0400	commit: updated and created new post
+b7f614fdf690eb8dc21681a03952222101d51456 3d843b49324fff645fac0df6b8c134c0dec63d47 chriscossich100 <chriscossich@gmail.com> 1698212447 -0400	commit: updated blog posts to include pictures

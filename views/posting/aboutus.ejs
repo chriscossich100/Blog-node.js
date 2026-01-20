@@ -1,0 +1,38 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    
+
+    <div class = "aboutusMain">
+        <h1>ABOUT The Blog</h1>
+        
+        <div class = "aboutusContent">
+            <!-- calculate my age -->
+            <%
+                var dob = new Date(1995, 9, 26);
+                var diff_ms = Date.now() - dob.getTime();
+                var age_dt = new Date(diff_ms); 
+                var age = Math.abs(age_dt.getUTCFullYear() - 1970);
+            %>
+            <p>Hello, My name is Chris Cossich and I created this site so that I could be able to share my experiences with you. Ever since I had the privelage to go out and do things on my 
+                own or with friends, I have tried to make the most of it.
+            </p>
+            <p>
+                Im <%= age %> years old, and live and work in the D.C area. I Graudated from George Mason University in the fall of 2019 with a Bachelors Degree in Information Technology. Currently,
+                I'm a software engineer and love building and working on websites. I found an interest in development when i was in high school, and have continued to expand my knowledge 
+                whenever I have the time. Lately, I've been enjoying working with wordpress and building custom themes using php and even getting into Gutenberg Blocks using React.js
+            </p>
+            <p>Originally, I thought sharing my expereinces through Instagram and other social media would get the job done. However, I beleive that creating this site is a great way to 
+                expand my audience.
+            </p>
+            <p>As an individual who is striving to get into the world of front-end development, I created this site as a way to show some of the skills I have aquired throughout my time learning
+                how to code. For those who are into development. This site, was developed using Node.js. It utilized MongoDb as its database management for the posts, comments, and users.
+            </p>
+        </div>
+    </div>
+
+
+    <%- include('../includes/end.ejs') %>

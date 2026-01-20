@@ -1,0 +1,106 @@
+<%- include('../includes/head.ejs') %>
+<link rel = "stylesheet" href = "/css/posts.css">
+
+<style>
+</style>
+</head>
+
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    
+
+    <main class = "overview" style = "--backgroundimage: url('../../images/<%= post.imageFileName %>')">
+        <div class ="imgDiv">
+            <img src="../../images/<%= post.imageFileName %>" alt="" >
+        </div>
+        <div class = "singlePost">
+            <header>
+                
+                <h1><%= post.title %></h1>
+                <span><%= post.date %></span>
+            </header>
+            <div class = "blogInfoDiv">
+
+                <% console.log('the postContent is: ', postContent); %>
+
+                <% 
+                    let imageSection = false;
+                    for (let paragraph in postContent) { 
+                    console.log('paragraph is: ', postContent[paragraph].content);
+                    if ( postContent[paragraph].type == 'p') { %> 
+
+                        <% if(imageSection == true) { 
+
+                            imageSection = false; %>
+                            </div>
+                        <% } %>
+
+                        <p id = "contentParagraph" style = "white-space: pre-line;">
+                            <%= postContent[paragraph].content %>
+                        </p>
+
+                    <% } 
+                    
+                    else { %>
+                        
+                        <% if (postContent[paragraph].type == 'img') { %>
+                            <% if (imageSection == false) { 
+                                imageSection = true; %>
+
+                                <div class="imageContent" style = "padding: 0px;">
+
+                             <% } %>
+                            <p id = "contentParagraph" class = "pImage" style = "white-space: pre-line;">
+                                <img src = "../../images/spain2023/<%= postContent[paragraph].content %>">
+                                
+                            </p>
+                            
+                        <% } %>
+                    <% } %>
+                    
+                    
+                    
+                <% } %>
+                
+            </div>
+        </div>
+        <div class = "commentsSection">
+
+            <div class = "commentDiv">
+                <h2>Have Something To Say About This Post?</h2>
+                <form action = "/posts/<%= post.paramTitle %>" method = "POST">
+                    <textarea name = "comment" id = "comment" placeholder="enter your comment here"></textarea>
+                    
+                    <% if(!user) { %>
+                        <input class = "signInInput" value = "Sign In To Post Comment" type = "submit"  name = "commentsubmitter" disabled>
+                    <% }  
+                    
+                    else { %>
+                        <input class = "postComment" value = "Post Comment" type = "submit"  name = "commentsubmitter">
+                    <% } %>
+
+                </form>
+                <% if(post.comment.length > 0) { %>
+                    <div class = "commentHolder">
+                    <% for (let comments of post.comment) { %>
+
+                        <div class = "comments">
+                            <p class = "user"> <%= comments.user.firstName %> <%= comments.user.lastName %></p><span><%= comments.date %></span>
+                            <p class = "actualComment"><%= comments.comment %></p> 
+                            
+                        </div>
+                    <% } %>    
+                    </div>
+                    
+
+                <% } else { %>
+                    <p>COMMENTS SEEM TO BE EMPTY :(</p>
+                <% } %>
+                        
+            </div>
+
+        </div>
+    </main>
+
+    <%- include('../includes/end.ejs') %>

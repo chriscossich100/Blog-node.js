@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Varela+Round&display=swap');
+
+.errorHeader{
+    margin-top: 4.51rem;
+    background-color: #e9e8e4;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: "Varela Round", Arial, Sans-Serif;
+    flex: 1 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+
+.errorHeader h1{
+    /* padding: 40px 21px; */
+    font-size: 28px;
+   
+    color: #00665e;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    font-weight: 100;
+    line-height: 1.38;
+    letter-spacing: 2px;
+    margin: 0px;
+}
+
+/* @media (min-width: 1200px){
+    
+    .errorHeader h1 {
+        padding: 180px 6.66%;
+    }
+} */
+
+.errorMessage{
+    background-color: white;
+    padding: 50px 21px 40px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: .9px;
+    line-height: 1.7;
+    width: 100%;
+}
+
+.errorMessage p{
+    margin: 0;
+}
+
+
+@media (min-width: 768px){
+
+
+    .errorHeader h1{
+        font-size: 55px;
+    }
+
+
+    .errorMessage{
+        font-size: 18px;
+        
+    }
+}   

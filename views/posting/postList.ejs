@@ -1,0 +1,60 @@
+<%- include('../includes/head.ejs') %>
+<link rel = "stylesheet" href = "/css/posts.css">
+</head>
+
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    
+    <main>
+        <% if(posts.length > 0) { %>
+            <div class = "postsList">
+                <% for (let post of posts) { %>
+                <div class = "postDisplay">
+                    <a href = "/posts/<%= post.paramTitle %>"><img src = "/images/<%= post.imageFileName %>" width="100%" height = "250px"></a>
+
+                    <div class="postDisplay-body">
+                        
+                        <div class = "titleHeader">
+                            <h3><a href = "/posts/<%= post.paramTitle %>"><%= post.title %></h3></a>
+                        </div>
+
+                        <div class = "dateContent">
+                            <span><%= post.date %></span>
+                        </div>
+                         
+                         <div class = "overviewContent">
+                             <span><a href = "/posts/<%= post.paramTitle %>"><%= post.overview %></a></span>
+                         </div>
+
+                         <a class="postDisplay-body-button" href="/posts/<%= post.paramTitle %>">
+                           Read More ->
+                         </a>
+                         
+     
+                    </div>
+
+                </div>
+                <% } %>
+            </div>
+
+        <% } else { %>
+            <div class = "aboutusMain">
+                <h1>My Blog Is Empty! Add Some Content!</h1>
+                <div class = "contactContent">
+                    <p>Click on the link below to add to to the blog
+                    </p>
+                   
+                    <h2>Keep in mind when creating the new blog post, Since this is a work in progress, please use an image by its image address. 
+                    </h2>
+                    <p>
+                        Click here -> <a href = "/createPost">Add a Post</a>
+                    </p>
+                    
+                </div>
+            </div>
+        <% } %>    
+    </main>
+    
+
+    <%- include('../includes/end.ejs') %>

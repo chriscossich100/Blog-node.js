@@ -1,0 +1,43 @@
+const express = require('express');
+const csp = require('content-security-policy');
+const routerRouter = express.Router();
+const blogController = require('../controllers/posts')
+
+
+//setting the content security policies:
+const cspPolicy = { //this will be a javascript object
+    // 'img-src': 'https://i.ibb.co',
+    'img-src': '*',
+    'script-src-elem': 'https://ajax.googleapis.com'
+};
+
+
+const globalCSP = csp.getCSP(csp.STARTER_OPTIONS);
+const localCSP = csp.getCSP(cspPolicy);
+
+
+//this will apply this policy to all requests if no local policy is set:
+// app.use(globalCSP);
+
+
+routerRouter.get('/', localCSP, blogController.homePage);
+
+routerRouter.get('/createPost', blogController.createPost);
+
+
+routerRouter.post('/createPost', blogController.postCreatePost);
+
+routerRouter.get('/posts',localCSP, blogController.getPosts);
+
+// routerRouter.get('/posts/:postId', localCSP, blogController.getPost);
+
+//TOP CODE HAS BEEN COMMENTED OUT SINCE WE ARE NO LONGER READING OR STORING OUR POSTS IN MONGODB!!!
+routerRouter.get('/posts/:postTitle', localCSP, blogController.getPost);
+
+routerRouter.post('/posts/:postTitle', localCSP, blogController.postComments);
+
+routerRouter.get('/aboutus', localCSP, blogController.aboutUs);
+
+routerRouter.get('/contact', localCSP, blogController.contact)
+
+module.exports = routerRouter;

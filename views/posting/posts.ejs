@@ -1,0 +1,160 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    
+
+    <div class = "mainContent1">
+        <!-- <div class = "picDdd" style = "background-image: url('https://i.ibb.co/d4hjH82/43-E66-B34-F8-D1-4-A57-96-D3-BFDB984755-C3.jpg');">
+        </div> -->
+        <div class="hero-wrap">
+            <div class="background-overlay"></div>
+            <div class="hero-wrap-content">
+                <h3>The Cossich Blog</h3>
+                <p>A simple blog about everything!</p>
+            </div>
+            <img class = "mainContent1__image" src="/images/spanishalley.jpg" alt="El Salvador 2017">
+        </div>
+        
+    </div>
+
+    <div class = "mainContent2">
+        <!-- <h1>Self Intro</h1> -->
+        <div class="mainContent2-table">
+            <div class = "picDiv">
+                <div class = "picDiv-wrapper" style="position: relative; overflow: hidden; width: 100%; margin: 0 auto;">
+                    <img src = "/images/meatpresentcompany2.jpeg" alt = "me">
+                </div>
+            </div>
+            <div class = "introductionDiv">
+                <div class = "div">
+                    <!-- calculate my age dynamically without manually changing. Yes, doing it manuall literally takes 5 seconds, but why not save all the time in the world right?? -->
+                    <%
+                        var dob = new Date("09/26/1995");
+                        var diff_ms = Date.now() - dob.getTime();
+                        var age_dt = new Date(diff_ms); 
+                        var age = Math.abs(age_dt.getUTCFullYear() - 1970);
+                    %>
+                    <!-- <h1>Self Intro</h1> -->
+                    <p>Hello, and welcome to my website/blog. My name is Chris Cossich and I'm currently <%= age %> years old. 
+                        Im located in Washington D.C and a graduate from George Mason University. I have an interest in many things such as Video Games, Cars, Whiskey, Squash, Mechanical Keyboards,
+                        and riding bikes in DC. I developed this website to show you what I have exprienced in my life so far.
+                        Expect to find content about travel, cars, food, etc. As I'm continously working on improving this website, please expect sudden changes. 
+                    </p>
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+
+    <div class = "mainContent3">
+        <h3>One-Stop Enjoyment for Adventurous & Curious Minds Alike</h3>
+        <div class = "Content3div">
+            <div class = "part1">
+                <div class="part1-img-wrap">
+                    <img src="/images/californiatrip.jpg" alt="miamiavalonandcar">
+                </div>
+                <h4>Travel</h4>
+                <p>Read about the places that I have traveled to. Throughout my life, I've had the chance to travel to some places around the world and in the States. 
+                <!-- <a href="#" class="part1-button">Read Travel Posts</a> -->
+            </div>
+            <div class = "part1">
+                <div class="part1-img-wrap">
+                    <img src="/images/keyboard.png" alt="miamiavalonandcar">
+                </div>
+                <h4>All kind of Hobbies</h4>
+                <p>Read about my hobbies that I enjoy and interest in cars (for you car enthusiats out there). Some of my hobbies include: Video Games, 
+                    biking in DC (recent hobby), coding, and much more. 
+                </p>
+                <!-- <a href="#" class="part1-button">Read Hobbies Posts</a> -->
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class = "mainContent4">
+
+            <% if (posts.title) { %>
+                <div class = "newPost">
+
+                    <div class="newPost-post">
+                        <div>
+                            <h5 class="newPost-post-title">New Post</h5>
+                            <h2><%= posts.title %></h2>
+                            <div class="newPost-post-excerpt">
+                                <p>
+                                    <%
+                                        var string = posts.content;
+                                        if(string.length > 10) {
+                                            string = string.substring(0,250) + "...";
+                                        }
+                                    %>
+                                    <%= string %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newPost-featured-image">
+                        <img src="/images/<%=posts.imageFileName %>" alt="Puerto Rico">
+                        <a href="/posts/<%= posts.paramTitle %>" class="newPost-button">Read Latest Post</a>   
+                    </div>
+                     
+                            
+                </div>
+            
+            <% }
+
+            else { %>
+                <p>There are no new posts yet. Add a post!</p>
+            <% } %>
+
+        <!-- BOTTOM CODE IS COMMENTED OUT SINCE WE NO LONGER ARE RETRIEVING OUR POSTS FROM MONGODB. WE ARE NOW USING A JSON FILE.
+         <% if (posts.length > 0){ %>
+            <div class = "newPost">
+                <% for(var i = 0; i < 1; i ++  ) { %>
+                    
+                        <a class = "aTagMobileView" href = "/posts/<%= posts[i]._id %>">
+                           <div class = "post1">
+                                <img src = "<%= posts[i].image %>" />
+                                <h5><%= posts[i].title %></h5>
+                                <h6><%= posts[i].date %></p>
+                            </div> 
+                        </a>
+
+                        <a class = "aTagDesktopView" href = "/posts/<%= posts[i]._id %>">
+                            <div class = "post1Desktop">
+                                <img src = "<%= posts[i].image %>" height="263" width ="300" />
+                            </div>
+                            <div class = "post1DesktopPostInfo">
+
+                                <div>
+                                    <h5><%= posts[i].title %></h5>
+                                
+                                    <h6><%= posts[i].date %></h6>  
+                                </div>
+                                
+                            </div>
+                        </a>
+                        
+                    
+
+                <% } %>
+            </div>
+
+        <% } 
+
+        else{ %>
+            <p>There are no new posts yet. Add a post!</p>
+        <% } %> -->
+
+
+        
+    </div>
+
+
+    <%- include('../includes/end.ejs') %>

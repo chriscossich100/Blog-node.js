@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Varela+Round&display=swap');
+
+
+
+.userForm {
+    padding: 40px 6.66%;
+    margin-top: 4.51rem;
+    /* min-height: 80-; */
+    /* font-family: "Varela Round", Arial, Sans-Serif; */
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.auth-display {
+    flex: 1 0 auto;
+}
+
+
+@media (min-width: 768px) {
+    .userForm {
+        padding: 100px 6.66%;
+    }
+}
+@media (min-width: 1024px) {
+    .userForm {
+        padding: 140px 6.66%;
+    }
+}
+@media (min-width: 1200px) {
+    .userForm {
+        padding: 180px 6.66%;
+    }
+}
+.accountTitle {
+    text-align: center;
+    max-width: 340px;
+    margin: 0 auto 50px;
+    font-size: 11px;
+    color: rgb(0, 102, 94);
+}
+
+@media (min-width: 1024px) {
+
+    .accountTitle {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .accountTitle {
+        font-size: 24px;
+    }
+}
+
+.userFillForm {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-holder {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+    .input-holder {
+        margin-bottom: 80px;
+    }
+}
+
+
+.input-holder fieldset {
+    padding: 0;
+    border: none;
+    margin: 0 0 15px;
+}
+
+.input-holder fieldset:last-child {
+    margin-bottom: 0;
+}
+
+.input-holder .label-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0px;
+    border: 0px;
+    /* clip: rect(0 0 0 0); */
+}
+
+.input-holder input[type=text], .input-holder input[type=email], .input-holder input[type=password]{
+
+    border: none;
+    border-bottom: 2px solid #00656E;
+    background-color: transparent;
+    border-radius: 2px;
+    color: #00656E;
+    font-size: 19px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    width: 100%;
+}
+
+.input-holder input:focus {
+    border-color: gray;
+    outline: none;
+}
+
+.userFillForm input[type=submit] {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: gray;
+    font-weight: 500;
+    vertical-align: middle;
+    height: 38px;
+    padding: 0 26px;
+    line-height: 38px;
+    letter-spacing: .188em;
+    overflow: hidden;
+    border: 0;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    user-select: none;
+    appearance: none;
+}
+
+.userFillForm .submessage {
+    font-size: 14px;
+    color: #00656E;
+}
+
+.submessage .submessage-link {
+    cursor: pointer;
+    border-bottom: 2px solid #00656E;
+    text-decoration: none;
+    color: #00656E;
+    font-size: 14px;
+}
+
+@media (min-width: 640px) {
+    .submessage .submessage-link {
+        font-size: 14px;
+}
+}
+
+
+.formContent{
+    /* background-color: yellow; */
+    margin-top: 4.51rem;
+    padding: 45px 20px 45px 20px; 
+    
+}
+
+main{
+    background-color: #f2f2f2;
+}
+
+.formHeader{
+    display: flex;
+    /* background-color: brown; */
+    justify-content: space-between;
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+
+}
+
+.formHeader h1{
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 62px;
+}
+
+
+.formHeader a{
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: .9x;
+    line-height: 62px;;
+    color: black;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+.signUpForm{
+    margin-top: 20px;
+    background-color: #f7f6f4;
+    
+    font-family: 'Lato', sans-serif;
+    border: 1px solid black;
+    border-bottom: 0;
+}
+
+.formLabel{
+    display: none;
+}
+
+.formInfo{
+    width: 100%;
+    padding: 0 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.formInfo input{
+    width: 100%;
+    border: none;
+    background-color: #f7f6f4;
+}
+
+.bigButtonBlack{
+    height: 50px;
+    width: 100%;
+    padding: 3px 10px 0 10px;
+    background-color: #2d2a56;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.errorMessage{
+    color: red;
+    font-size: 13px;
+    letter-spacing: .9px;
+    line-height: 1.7;
+    font-family: "AktivGrotesk", "Fakt", sans-serif;
+}
+
+
+@media (min-width: 768px){
+    .formContent{
+        width: 50%;
+        margin: 4.51rem auto 0 auto;
+    }
+
+    .formHeader h1{
+        font-size: 33px;
+    }
+
+    .formInfo{
+        height: 90px;
+    }
+}
+
+
+@media (min-width: 851px){
+    
+    .formContent{
+        width: 50%;
+        margin: 4.51rem auto 0 auto;
+    }
+
+    .formHeader h1{
+        font-size: 33px;
+    }
+
+    .formInfo{
+        height: 90px;
+    }
+
+    .formLabel{
+        display: block;
+        flex-basis: 35%;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+};
+
+
