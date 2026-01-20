@@ -54,7 +54,7 @@ const ObjectId = mongodb.ObjectId;
 
         return db.collection('users').insertOne(this) //we are returning the collection becacuse it will allow us to treat this whole chain as a promise. 
             .then(result =>{
-                console.log(result);
+                console.log('the result of the new user is: ',result);
             })
             .catch(err =>{
                 console.log(err);

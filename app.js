@@ -1,5 +1,6 @@
 //main app.js file
 
+require('dotenv').config(); //this will load the variables from the .env file into process.env
 const express = require('express');
 const path = require('path');
 const https = require('https');
