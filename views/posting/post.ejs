@@ -10,9 +10,9 @@
     <%- include('../includes/navigation.ejs') %>
     
 
-    <main class = "overview" style = "--backgroundimage: url('../../images/<%= post.imageFileName %>')">
+    <main class = "overview" style = "--backgroundimage: url('<%= post.image %>')">
         <div class ="imgDiv">
-            <img src="../../images/<%= post.imageFileName %>" alt="" >
+            <img src="<%= post.image %>" alt="" >
         </div>
         <div class = "singlePost">
             <header>
@@ -20,54 +20,21 @@
                 <h1><%= post.title %></h1>
                 <span><%= post.date %></span>
             </header>
-            <div class = "blogInfoDiv">
+            <div class = "blogInfoDiv" style = "white-space: pre-line;">
 
-                <% 
-                    let imageSection = false;
-                    for (let paragraph in postContent) { 
-                   
-                    if ( postContent[paragraph].type == 'p') { %> 
-
-                        <% if(imageSection == true) { 
-
-                            imageSection = false; %>
-                            </div>
-                        <% } %>
-
-                        <p id = "contentParagraph" style = "white-space: pre-line;">
-                            <%= postContent[paragraph].content %>
+                        <p id = "contentParagraph">
+                            <%- post.content.replace(/\\r\\n\\r\\n/g, '<br><br>').replace(/\\r\\n/g, '<br>') %>
                         </p>
-
-                    <% } 
                     
-                    else { %>
-                        
-                        <% if (postContent[paragraph].type == 'img') { %>
-                            <% if (imageSection == false) { 
-                                imageSection = true; %>
-
-                                <div class="imageContent" style = "padding: 0px;">
-
-                             <% } %>
-                            <p id = "contentParagraph" class = "pImage" style = "white-space: pre-line;">
-                                <img src = "../../images/spain2023/<%= postContent[paragraph].content %>">
-                                
-                            </p>
-                            
-                        <% } %>
-                    <% } %>
-                    
-                    
-                    
-                <% } %>
                 
             </div>
         </div>
+
         <div class = "commentsSection">
 
             <div class = "commentDiv">
                 <h2>Have Something To Say About This Post?</h2>
-                <form action = "/posts/<%= post.paramTitle %>" method = "POST">
+                <form action = "/posts/<%= post._id %>" method = "POST">
                     <textarea name = "comment" id = "comment" placeholder="enter your comment here"></textarea>
                     
                     <% if(!user) { %>
@@ -79,12 +46,12 @@
                     <% } %>
 
                 </form>
-                <% if(post.comment.length > 0) { %>
+                <% if(comment.length > 0) { %>
                     <div class = "commentHolder">
-                    <% for (let comments of post.comment) { %>
+                    <% for (let comments of comment) { %>
 
                         <div class = "comments">
-                            <p class = "user"> <%= comments.user.firstName %> <%= comments.user.lastName %></p><span><%= comments.date %></span>
+                            <p class = "user"> <%= comments.userId.firstName %> <%= comments.userId.lastName %></p><span><%= comments.date %></span>
                             <p class = "actualComment"><%= comments.comment %></p> 
                             
                         </div>
@@ -99,6 +66,8 @@
             </div>
 
         </div>
+
+        
     </main>
 
     <%- include('../includes/end.ejs') %>

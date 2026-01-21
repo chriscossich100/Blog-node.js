@@ -6,7 +6,8 @@ let db;
 
 const mongoConnect = (callback) => {
   MongoClient.connect(
-    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@blogcluster.irdq5.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`, //mongodb will create the database if its not yet been created. we dont
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@blogcluster.irdq5.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`, 
+    //mongodb will create the database if its not yet been created. we dont
     //have to do it manually.
 
   )

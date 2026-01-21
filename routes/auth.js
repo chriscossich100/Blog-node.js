@@ -18,11 +18,6 @@ const {body} = require('express-validator//check');
 
 //IN THIS ROUTE WE INCLDUED EXPRESS VALIDATOR 3RD PARTY PACKAGE. THIS ALLOWS US TO VALIDATE CERTAIN INPUT SUCH AS EMAILS AND PASSWORD. 
 
-
-const User = require('../models/user');
-
-
-
 router.get('/signup', localCSP, authController.getSignup);
 
 router.post('/signup',

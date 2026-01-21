@@ -34,16 +34,19 @@ class Comments{
     }
 
     static findById(commentId){
+        console.log('the comment id in the models is: ' + commentId, " and its type is: ", typeof commentId);
         const db = getDb();
         return db.collection('comments').find({postId: commentId}).sort({realDate: -1}).toArray()
             .then(comments =>{
-                
+                console.log('we are here my nigger bigger')
+                console.log(comments)
                 return comments;
             })
             .catch(err =>{
                 console.log(err);
             })
     }
+
 };
 
 

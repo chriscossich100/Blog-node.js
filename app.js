@@ -3,8 +3,7 @@
 require('dotenv').config(); //this will load the variables from the .env file into process.env
 const express = require('express');
 const path = require('path');
-const https = require('https');
-const fs = require('fs');
+// const https = require('https');
 const bodyParser = require('body-parser');
 const multer = require('multer'); // is a package that lets us parse incoming requests. However it parses incoming requests that are files. 
 const session = require('express-session');
@@ -23,14 +22,6 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-
-
-
-
-
-
-//setting node.js to read files (the images)
-let fileName;
 
     //the disk storage engine gives us full control on storing files to the disk. It takes 2 optional functions, destination and filename. 
 const fileStorage = multer.diskStorage({

@@ -10,53 +10,20 @@ exports.getProfilePage = (req, res, next) => {
   //if there is no one logged in automatically redirect to the homepage. This prevents any unwanted errors.
   if (!req.user) {
     res.redirect("/");
-  } 
-  else {
-    // Users.findPostsRelatedToUser(req.user)
-    //   .then((posts) => {
-    //     res.render("profile/profile", {
-    //       title: "Your Profile",
-    //       user: req.user,
-    //       path: "/profile/:userFirstName",
-    //       posts: posts,
-    //       errorMessage: "",
-    //       passwordClass: "",
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-
-    let postsfromjson = require("../util/posts.json");
-    let posts = [];
-
-    for (i = 0; i < postsfromjson.length; i++) {
-      console.log(postsfromjson[i].title);
-      if (postsfromjson[i].comment.length != 0) {
-    
-        for (k = 0; k < postsfromjson[i].comment.length; k++) {
-          if (req.user._id == postsfromjson[i].comment[k].user._id) {
-            console.log("we have a match!!!", postsfromjson[i].title);
-
-            posts.push({
-              title: postsfromjson[i].title,
-              paramTitle: postsfromjson[i].paramTitle,
-              imageFileName: postsfromjson[i].imageFileName
-            });
-            break;
-          }
-        }
-      }
-
-    }
-
-    res.render("profile/profile", {
-        title: "Your Profile",
-        user: req.user,
-        path: "/profile/:userFirstName",
-        posts: posts,
-        errorMessage: "",
-        passwordClass: "",
+  } else {
+    Users.findPostsRelatedToUser(req.user)
+      .then((posts) => {
+        res.render("profile/profile", {
+          title: "Your Profile",
+          user: req.user,
+          path: "/profile/:userFirstName",
+          posts: posts,
+          errorMessage: "",
+          passwordClass: "",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 };
@@ -69,7 +36,6 @@ exports.postChangePassword = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
-
     Users.findPostsRelatedToUser(req.user)
       .then((posts) => {
         return res.render("profile/profile", {

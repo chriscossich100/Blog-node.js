@@ -11,7 +11,7 @@
     <div class = "header-right">
         <% if(isAuthenticated) { %>
             <a class = "onlyFirst" href = "/profile/<%= user.firstName %>"> Profile</a>
-            <a class = "firstandLast" href = "/profile/<%= user.firstName %>"> Welcome <%= user.firstName %> <%= user.lastName %></a>
+            <a class = "firstandLast" href = "/profile/<%= user.firstName %>"> Welcome, <%= user.firstName %> <%= user.lastName %></a>
         <% }
         else { %>
             <a href = "/login">Account</a>

@@ -29,12 +29,9 @@ routerRouter.post('/createPost', blogController.postCreatePost);
 
 routerRouter.get('/posts',localCSP, blogController.getPosts);
 
-// routerRouter.get('/posts/:postId', localCSP, blogController.getPost);
+routerRouter.get('/posts/:postId', localCSP, blogController.getPost);
 
-//TOP CODE HAS BEEN COMMENTED OUT SINCE WE ARE NO LONGER READING OR STORING OUR POSTS IN MONGODB!!!
-routerRouter.get('/posts/:postTitle', localCSP, blogController.getPost);
-
-routerRouter.post('/posts/:postTitle', localCSP, blogController.postComments);
+routerRouter.post('/posts/:postId', localCSP, blogController.postComments);
 
 routerRouter.get('/aboutus', localCSP, blogController.aboutUs);
 
