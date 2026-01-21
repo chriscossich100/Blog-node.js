@@ -24,7 +24,7 @@ class Posts{
 
         return db.collection('posts').insertOne(this) //we are returning the collection becacuse it will allow us to treat this whole chain as a promise. 
             .then(result =>{
-                console.log(result);
+                // console.log(result);
             })
             .catch(err =>{
                 console.log(err);
@@ -36,7 +36,7 @@ class Posts{
         return db.collection('posts').find().sort({realDate: -1})
             .toArray() //which allows us to get all the documents and turn them into a javascript array. this is good for at least 100 documents.
             .then(posts =>{
-                console.log(posts);
+                // console.log(posts);
                 return posts;
             })
             .catch(err =>{
@@ -48,7 +48,7 @@ class Posts{
         const db = getDb();
         return db.collection('posts').find({_id: new mongodb.ObjectId(postId)}).next()
             .then(post =>{
-                console.log(post);
+                // console.log(post);
                 return post;
             })
             .catch(err =>{

@@ -32,7 +32,6 @@ exports.postSignup = (req, res, next) =>{
     //it will be added to the validation result which will then be added to errors. This validation occures in the route middlewares. 
 
     if(!errors.isEmpty()){
-        console.log('the list of errors in the signup page are: ' + errors);
         console.log('the list of errors in the signup page converted to an array are: ' + errors.array());
         return res.render('auth/signup', {
             path: '/signup',

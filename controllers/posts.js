@@ -150,7 +150,6 @@ exports.postCreatePost = (req, res, next) => {
 
     try {
       fs.writeFileSync(path.join(__dirname, "../util/posts.json"), dater);
-      console.log("JSON data is saved");
 
       //once post has been created. redirect to the main post list page.
       res.redirect("/posts");
@@ -197,7 +196,6 @@ exports.getPosts = (req, res, next) => {
   }
 
   // console.log('the arrangedPostInfo is: ', arrangedPostInfo)
-  console.log("this is me and this is youfdfdfddfd");
   res.render("posting/postList", {
     posts: arrangedPostInfo,
     title: "All Posts",
@@ -278,7 +276,7 @@ exports.getPost = (req, res, next) => {
 
   //once we have read the post data: convert it into a json object.
   const posts = JSON.parse(readPost.toString());
-  console.log("the posts are: ", posts);
+  // console.log("the posts are: ", posts);
 
   let postInfo;
 
@@ -294,14 +292,14 @@ exports.getPost = (req, res, next) => {
   let stringer = "";
   let adjustCOntent = [];
   for (let index = 0; index < postInfo.content.length; index++) {
-    console.log(postInfo.content[index], ' and its index is ', index);
+    
     if (
       postInfo.content[index] != "\r" &&
       postInfo.content[index] != "\n" &&
       index != postInfo.content.length - 1
     ) {
       stringer += postInfo.content[index];
-      console.log(stringer);
+      // console.log(stringer);
     } else {
       if (stringer != "" && stringer.substring(0, 4) != '<img') {
         if (index == postInfo.content.length -1 ) {
@@ -328,12 +326,12 @@ exports.getPost = (req, res, next) => {
 
         
       }
-      console.log("at this point index was: ", postInfo.content[index]);
+      // console.log("at this point index was: ", postInfo.content[index]);
       stringer = "";
     }
   }
 
-  console.log("the adjuster content is: ", adjustCOntent);
+  // console.log("the adjuster content is: ", adjustCOntent);
 
   //if postInfo does not equal null, that measn that a post has been found. Load that post.
   if (postInfo != null) {

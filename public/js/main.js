@@ -1,12 +1,9 @@
 $(function(){
 
-    console.log('the offset of the window is: ' + window.pageYOffset);
-
     $('.side-menu-toggle').on('click', menuHandler);
 
 
     function menuHandler(){
-        console.log('hey there');
         $('.backgroundDrop').css('display', 'block');
 
         $('.sideMenu').css('transform', 'translateX(0)');

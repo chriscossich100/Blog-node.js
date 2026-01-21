@@ -22,12 +22,10 @@
             </header>
             <div class = "blogInfoDiv">
 
-                <% console.log('the postContent is: ', postContent); %>
-
                 <% 
                     let imageSection = false;
                     for (let paragraph in postContent) { 
-                    console.log('paragraph is: ', postContent[paragraph].content);
+                   
                     if ( postContent[paragraph].type == 'p') { %> 
 
                         <% if(imageSection == true) { 

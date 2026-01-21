@@ -28,14 +28,12 @@ exports.getProfilePage = (req, res, next) => {
     //   });
 
     let postsfromjson = require("../util/posts.json");
-    // console.log("daydreaming dude is me bro", postsfromjson);
     let posts = [];
 
     for (i = 0; i < postsfromjson.length; i++) {
       console.log(postsfromjson[i].title);
       if (postsfromjson[i].comment.length != 0) {
-        console.log("the comment is: ", postsfromjson[i].comment);
-        console.log(req.user);
+    
         for (k = 0; k < postsfromjson[i].comment.length; k++) {
           if (req.user._id == postsfromjson[i].comment[k].user._id) {
             console.log("we have a match!!!", postsfromjson[i].title);
@@ -71,7 +69,6 @@ exports.postChangePassword = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
-    console.log("this is me and this is you bro for real", errors.errors);
 
     Users.findPostsRelatedToUser(req.user)
       .then((posts) => {
