@@ -35,7 +35,7 @@
                                 <div class="post-commented-lists-post">
                                     <img src="<%= post.image %>" alt="">
                                     <p style="padding: 15px; text-align: center;"><%= post.title %></p>
-                                    <a href="/posts/<%= post.title.replaceAll(' ', '-') %>"></a>
+                                    <a href="/posts/<%= post.title.replace(/ /g, '-') %>"></a>
                                 </div>
                             
                            <% } %>

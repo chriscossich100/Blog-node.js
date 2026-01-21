@@ -101,7 +101,7 @@
                     </div>
                     <div class="newPost-featured-image">
                         <img src="<%=posts.image %>" alt="Featured Image">
-                        <a href="/posts/<%= posts.title.replaceAll(' ', '-') %>" class="newPost-button">Read Latest Post</a>   
+                        <a href="/posts/<%= posts.title.replace(/ /g, '-')%>" class="newPost-button">Read Latest Post</a>   
                     </div>
                      
                             

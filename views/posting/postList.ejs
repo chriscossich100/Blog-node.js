@@ -11,12 +11,12 @@
             <div class = "postsList">
                 <% for (let post of posts) { %>
                 <div class = "postDisplay">
-                    <a href = "/posts/<%= post.title.replaceAll(' ', '-') %>"><img src = "<%= post.image %>" width="100%" height = "250px"></a>
+                    <a href = "/posts/<%= post.title.replace(/ /g, '-') %>"><img src = "<%= post.image %>" width="100%" height = "250px"></a>
 
                     <div class="postDisplay-body">
                         
                         <div class = "titleHeader">
-                            <h3><a href = "/posts/<%= post.title.replaceAll(' ', '-') %>"><%= post.title %></h3></a>
+                            <h3><a href = "/posts/<%= post.title.replace(/ /g, '-') %>"><%= post.title %></h3></a>
                         </div>
 
                         <div class = "dateContent">
@@ -24,10 +24,10 @@
                         </div>
                          
                          <div class = "overviewContent">
-                             <span><a href = "/posts/<%= post.title.replaceAll(' ', '-') %>"><%= post.overview %></a></span>
+                             <span><a href = "/posts/<%= post.title.replace(/ /g, '-') %>"><%= post.overview %></a></span>
                          </div>
 
-                         <a class="postDisplay-body-button" href="/posts/<%= post.title.replaceAll(' ', '-') %>">
+                         <a class="postDisplay-body-button" href="/posts/<%= post.title.replace(/ /g, '-') %>">
                            Read More ->
                          </a>
                          
