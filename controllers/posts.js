@@ -84,7 +84,7 @@ exports.getPosts = (req, res, next) => {
 exports.getPost = (req, res, next) => {
   const postId = req.params.postId;
   console.log("the postId received in the getPost controller is: " + postId);
-  let regTitle = postId.replace(/ /g, '-');
+  let regTitle = postId.replace(/-/g, ' ');
   console.log("the regTitle after replacing dashes is: " + regTitle);
   let postInfo;
 
