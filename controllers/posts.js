@@ -40,18 +40,9 @@ exports.postCreatePost = (req, res, next) => {
   const overview = req.body.overview;
   const image = req.body.image;
   const date = new Date();
-  const d = date.toString();
-  const daters =
-    d.split(" ")[0] +
-    " " +
-    d.split(" ")[1] +
-    " " +
-    d.split(" ")[2] +
-    " " +
-    d.split(" ")[3] +
-    " " +
-    d.split(" ")[4];
-  const posts = new Posts(title, image, overview, content, daters, date);
+  const d = date.toDateString();
+  
+  const posts = new Posts(title, image, overview, content, d, date);
 
   posts
     .save() //SINCE WE ARE RETURNING THE COLLECTION IN THE POST MODULE,  WE CANT TREAT THIS AS A CHAIN PROMISE AND USE THE .then.
@@ -82,7 +73,7 @@ exports.getPosts = (req, res, next) => {
 
 //controller for getting a single post.
 exports.getPost = (req, res, next) => {
-  const postId = req.params.postId;
+  const postId = decodeURIComponent(req.params.postId);
   console.log("the postId received in the getPost controller is: " + postId);
   let regTitle = postId.replace(/-/g, ' ');
   console.log("the regTitle after replacing dashes is: " + regTitle);
