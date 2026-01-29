@@ -6,8 +6,6 @@ const path = require("path");
 const multer = require("multer"); // is a package that lets us parse incoming requests. However it parses incoming requests that are files.
 const { post } = require("../routes/blog");
 
-
-
 exports.homePage = (req, res, next) => {
   Posts.fetchLatestPost()
     .then((posts) => {
@@ -21,7 +19,6 @@ exports.homePage = (req, res, next) => {
     .catch((err) => {
       console.log(err);
     });
-
 };
 
 //controller for creating a post.
@@ -41,7 +38,7 @@ exports.postCreatePost = (req, res, next) => {
   const image = req.body.image;
   const date = new Date();
   const d = date.toDateString();
-  
+
   const posts = new Posts(title, image, overview, content, d, date);
 
   posts
@@ -68,14 +65,13 @@ exports.getPosts = (req, res, next) => {
     .catch((err) => {
       console.log(err);
     });
-
 };
 
 //controller for getting a single post.
 exports.getPost = (req, res, next) => {
   const postId = decodeURIComponent(req.params.postId);
   console.log("the postId received in the getPost controller is: " + postId);
-  let regTitle = postId.replace(/-/g, ' ');
+  let regTitle = postId.replace(/-/g, " ");
   console.log("the regTitle after replacing dashes is: " + regTitle);
   let postInfo;
 
@@ -144,13 +140,11 @@ exports.postComments = (req, res, next) => {
     .save()
     .then((result) => {
       console.log(result);
-      res.redirect(`/posts/${postInfo.title.replace(/ /g, '-')}`);
+      res.redirect(`/posts/${postInfo.title.replace(/ /g, "-")}`);
     })
     .catch((err) => {
       console.log(err);
     });
-
-  
 };
 
 //controller for gallery page.

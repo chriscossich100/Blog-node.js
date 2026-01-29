@@ -111,7 +111,7 @@
   letter-spacing: -1px;
   line-height: 40px;
   margin: 0;
-  color: #00665e;
+  color: #1f5f76;
   /* font-family: 'Varela Round', Arial, Sans-Serif; */
 }
 
@@ -146,7 +146,7 @@
   padding: 0 0 1.5rem 0;
   letter-spacing: 0.9px;
   /* font-family: 'Lato', sans-serif; */
-  color: #00665e;
+  color: #1f5f76;
 }
 
 .postDisplay-body-button {
@@ -337,7 +337,7 @@
 
 .commentsSection .postComment {
   padding: 15px;
-  background-color: #00665e;
+  background-color: #1f5f76;
   margin-top: 20px;
   color: white;
   font-weight: 600;

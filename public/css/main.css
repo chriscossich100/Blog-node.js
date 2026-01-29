@@ -50,7 +50,7 @@ body {
   padding: 0 1.5rem;
   align-items: center;
   justify-content: space-evenly;
-  color: #00665e;
+  color: #1f5f76;
   font-family: 'Oswald', sans-serif;
   /* font-family: "Varela Round", Arial, Sans-Serif; */
   /* border-bottom: 2px solid #c7c2ba;
@@ -62,7 +62,7 @@ body {
 }
 
 .main-header a {
-  color: #00665e;
+  color: #1f5f76;
   /* margin: 0 auto; */
   letter-spacing: 2px;
   font-size: 12px;
@@ -125,7 +125,7 @@ body {
 .side-menu-toggle {
   border: 1px solid white;
   background-color: transparent;
-  color: #00665e;
+  color: #1f5f76;
   font-size: 10px;
   padding: 0.5rem;
   display: block;
@@ -145,7 +145,7 @@ body {
   width: 300rem;
   height: 100vh;
   max-width: 70%;
-  background-color: #00665e;
+  background-color: #1f5f76;
   position: fixed;
   left: 0;
   top: 0;
@@ -334,7 +334,7 @@ body {
 /* MAIN CONTENT 2 */
 .mainContent2 {
   background-color: #f9f9f9;
-  color: #00665e;
+  color: #1f5f76;
   /* display: flex; */
 }
 
@@ -449,7 +449,7 @@ body {
 .mainContent3 {
   background-color: #ffffff;
   padding: 40px 6.66%;
-  color: #00665e;
+  color: #1f5f76;
   font-size: 19px;
   font-family: 'Oswald', sans-serif;
   /* font-family: 'Varela Round', sans-serif; */
@@ -580,7 +580,7 @@ body {
 
 .mainContent4 {
   background-color: #f9f9f9;
-  color: #00665e;
+  color: #1f5f76;
   padding: 40px 6.66%;
   font-family: 'Oswald', sans-serif;
 }
@@ -694,7 +694,7 @@ body {
 .newPost-button {
   cursor: pointer;
   color: white;
-  background-color: #00665e;
+  background-color: #1f5f76;
   padding: 0 26px;
   line-height: 38px;
   text-decoration: none;
@@ -789,7 +789,7 @@ body {
   /* align-items: center;
     text-align: center; */
   font-family: "Lato", sans-serif;
-  color: #00665e;
+  color: #1f5f76;
 }
 
 @media (min-width: 769px) {
@@ -805,7 +805,7 @@ body {
 }
 
 footer {
-  background-color: #00665e;
+  background-color: #1f5f76;
   padding: 20px 30px 67px 20px;
 }
 
@@ -958,7 +958,7 @@ footer {
   line-height: 1.38;
   letter-spacing: -1px;
   margin: 0px;
-  color: #00665e;
+  color: #1f5f76;
   text-shadow: 0 2px 2px rgba(0 0 0 / 50%);
 }
 
