@@ -37,7 +37,7 @@
     max-width: 340px;
     margin: 0 auto 50px;
     font-size: 11px;
-    color: rgb(0, 102, 94);
+    color: #1f5f76;
 }
 
 @media (min-width: 1024px) {
@@ -96,10 +96,10 @@
 .input-holder input[type=text], .input-holder input[type=email], .input-holder input[type=password]{
 
     border: none;
-    border-bottom: 2px solid #00656E;
+    border-bottom: 2px solid #1f5f76;
     background-color: transparent;
     border-radius: 2px;
-    color: #00656E;
+    color: #1f5f76;
     font-size: 19px;
     font-weight: 400;
     height: 50px;
@@ -119,7 +119,7 @@
     font-size: 13px;
     text-transform: uppercase;
     color: #fff;
-    background-color: gray;
+    background-color: #1f5f76;
     font-weight: 500;
     vertical-align: middle;
     height: 38px;
@@ -137,14 +137,14 @@
 
 .userFillForm .submessage {
     font-size: 14px;
-    color: #00656E;
+    color: #1f5f76;
 }
 
 .submessage .submessage-link {
     cursor: pointer;
-    border-bottom: 2px solid #00656E;
+    border-bottom: 2px solid #1f5f76;
     text-decoration: none;
-    color: #00656E;
+    color: #1f5f76;
     font-size: 14px;
 }
 
